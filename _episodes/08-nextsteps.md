@@ -1,7 +1,7 @@
 ---
-title: "Bootstrapping your use of ARCHER2"
-teaching: 15
-exercises: 45
+title: "(Optional extra) Bootstrapping your use of ARCHER2"
+teaching: 0
+exercises: 0
 questions:
 - "How can I get started with using ARCHER?"
 objectives:
