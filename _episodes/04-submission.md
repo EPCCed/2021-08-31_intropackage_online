@@ -66,8 +66,9 @@ The nodes can be in many different states, the most common you will see are:
 If you prefer to see the state of individual nodes, you can use the `sinfo -N -l` command.
 
 > ## Lots to look at!
-> Warning! The `sinfo -N -l` command will produce a lot of output as there are over 5000 individual 
-> nodes on ARCHER2!
+> Warning! The `sinfo -N -l` command will produce a lot of output as there are over 1000 individual 
+> nodes on the current ARCHER2 system! (It will be even worse on the full system when there will be
+> over 5,500 nodes.) 
 {: .callout}
 
 ```
