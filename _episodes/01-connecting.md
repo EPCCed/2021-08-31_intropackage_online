@@ -63,7 +63,21 @@ and associate them with your account:
 
 * [Connecting to ARCHER2](https://docs.archer2.ac.uk/user-guide/connecting/)
 
-## Data transfer services: scp, rsync, Globus Online
+> ## Log in to ARCHER2
+> Once you have managed to setup your SSH key pair and have retrieved your initial password from
+> SAFE, try to log into ARCHER2 for the first time using the command:
+> 
+> ```
+> ssh -i /path/to/sshkey username@login.archer2.ac.uk
+> ```
+>
+> The first time you login, you will be prompted to change your password. You will need
+> to enter your initial password from SAFE again (this will be referred to as your LDAP
+> password). Once you have entered this, you will be prompted to choose a new password
+> which you must enter twice.
+{: .challenge}
+
+## Data transfer services: scp, rsync
 
 ARCHER2 supports a number of different data transfer mechanisms. The one you choose depends
 on the amount and structure of the data you want to transfer and where you want to transfer
