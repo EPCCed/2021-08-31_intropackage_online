@@ -184,7 +184,7 @@ You use the `sbatch` command to submit job submission scripts to the scheduler. 
 above script was saved in a file called `test_job.slurm`, you would submit it with:
 
 ```
-auser@uan01:~> sbatch test_job.slurm
+auser@uan01:~> sbatch --reservation=ta035_196 test_job.slurm
 ```
 {: .language-bash}
 ```
@@ -192,7 +192,9 @@ Submitted batch job 23996
 ```
 {: .output}
 
-Slurm reports back with the job ID for the job you have submitted
+Slurm reports back with the job ID for the job you have submitted. We used a reservation here for this
+course so we know our jobs will run straight away. You do not usually use the `--reservation` option
+when you are using ARCHER2.
 
 > ## What are the default for `sbatch` options?
 > If you do not specify job options, what are the defaults for Slurm on ARCHER2? Submit jobs to find out
@@ -220,7 +222,7 @@ Slurm reports back with the job ID for the job you have submitted
 > > 
 > > export OMP_NUM_THREADS=1
 > > 
-> > srun --cpu-bind=cores xthi
+> > srun --hint=nomultithread --distribution=block:block xthi
 > > ```
 > > {: .language-bash}
 > > 
@@ -283,6 +285,8 @@ JOBID  PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 ...
 ```
 {: .output}
+
+If you just want to see your jobs, you can use the `squeue -u $USER` command.
 
 ### Cancelling jobs with `scancel`
 
@@ -416,7 +420,7 @@ For example, to execute `xthi` across all cores on two nodes (1 MPI task per cor
 OpenMP threading) within an interactive job you would issue the following commands:
 
 ```
-auser@uan01:~> srun --partition=standard --qos=standard --nodes=2 --ntasks-per-node=128 --cpus-per-task=1 --time=0:10:0 --account=t01 xthi
+auser@uan01:~> srun --reservation==ta035_196 --partition=standard --qos=standard --nodes=2 --ntasks-per-node=128 --cpus-per-task=1 --time=0:10:0 --account=t01 xthi
 ```
 {: .language-bash}
 ```
