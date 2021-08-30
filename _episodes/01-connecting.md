@@ -63,7 +63,7 @@ and associate them with your account:
 
 * [Connecting to ARCHER2](https://docs.archer2.ac.uk/user-guide/connecting/)
 
-> ## Log in to ARCHER2
+> ## Log in to ARCHER2
 > Once you have managed to setup your SSH key pair and have retrieved your initial password from
 > SAFE, try to log into ARCHER2 for the first time using the command:
 > 
