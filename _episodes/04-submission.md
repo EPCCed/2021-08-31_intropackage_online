@@ -359,7 +359,7 @@ per node and 16 OpenMP threads per MPI task (so all 256 cores across both nodes 
 #SBATCH --ntasks-per-node=8
 #SBATCH --cpus-per-task=16
 #SBATCH --time=0:10:0
-#SBATCH --account=t01
+#SBATCH --account=ta035
 #SBATCH --partition=standard
 #SBATCH --qos=standard
 
@@ -420,7 +420,8 @@ For example, to execute `xthi` across all cores on two nodes (1 MPI task per cor
 OpenMP threading) within an interactive job you would issue the following commands:
 
 ```
-auser@uan01:~> srun --reservation==ta035_196 --partition=standard --qos=standard --nodes=2 --ntasks-per-node=128 --cpus-per-task=1 --time=0:10:0 --account=t01 xthi
+auser@uan01:~> module load xthi
+auser@uan01:~> srun --reservation==ta035_196 --partition=standard --qos=standard --nodes=2 --ntasks-per-node=128 --cpus-per-task=1 --time=0:10:0 --account=ta035 xthi
 ```
 {: .language-bash}
 ```
